@@ -54,10 +54,12 @@ struct NotificationView: View {
                 Toggle("Erinnerung", isOn: isNotificationActiveBinding)
                 .disabled(toggleIsDisabled)
                 
+                /*
                 Button("DEBUG: Erinnerungen anzeigen") {
                     showNotification()
                 }
-
+                */
+                
             }
         }
         .navigationBarTitle("Erinnerungen")
@@ -93,8 +95,8 @@ var getRequest: UNNotificationRequest {
     
     // Trigger
     var dateInfo = DateComponents()
-    dateInfo.hour = 17
-    dateInfo.minute = 22
+    dateInfo.hour = 12
+    dateInfo.minute = 0
     let trigger = UNCalendarNotificationTrigger(
         dateMatching: dateInfo,
         repeats: false
@@ -135,6 +137,7 @@ func removeNotification() {
     
 }
 
+/*
 // Only for debug:
 func showNotification() {
     
@@ -154,6 +157,7 @@ func showNotification() {
     print("delegate \((center.delegate != nil) ? "exists" : "= nil")")
 
 }
+*/
 
 func askToAllowNotifications() {
     
