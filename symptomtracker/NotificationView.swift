@@ -140,28 +140,3 @@ func allowNotifications() {
 
 }
 
-class CurrentUserNotificationCenterDelegate: NSObject, UNUserNotificationCenterDelegate {
-    
-    func userNotificationCenter(
-        _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification,
-        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
-    ) {
-        print("\(#function)")
-        completionHandler(.alert)
-        completionHandler(.sound)
-    }
-    
-}
-
-var currentUserNotificationCenterDelegate: CurrentUserNotificationCenterDelegate?
-
-func activateUserNotificationCenterDelegate() {
-
-    let center = UNUserNotificationCenter.current()
-    let delegate = CurrentUserNotificationCenterDelegate()
-    center.delegate = delegate
-    currentUserNotificationCenterDelegate = delegate
-    print("\(#function)")
-    
-}
