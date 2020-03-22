@@ -21,14 +21,16 @@ struct ContentView: View {
             NavigationView {
                 NotificationView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "alarm")
                 Text("Erinnerungen")
             }
 
             NavigationView {
-                InfoView()
+                ImprintView()
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Image(systemName: "info.circle")
                 Text("Impressum")

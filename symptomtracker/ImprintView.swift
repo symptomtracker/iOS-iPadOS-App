@@ -1,13 +1,5 @@
 //
-//  InfoView.swift
-//  symptomtracker
-//
-//  Created by Wolf Dieter Dallinger on 22.03.20.
-//  Copyright © 2020 Wolf Dieter Dallinger. All rights reserved.
-//
-
-//
-//  NotificationView.swift
+//  ImprintView.swift
 //  symptomtracker
 //
 //  Created by Wolf Dieter Dallinger on 22.03.20.
@@ -16,7 +8,7 @@
 
 import SwiftUI
 
-struct InfoView: View {
+struct ImprintView: View {
     
     #warning("Impressum und Datenschutz nachtragen!")
     
@@ -39,14 +31,14 @@ struct InfoView: View {
             }
             
         }
-        .navigationBarTitle("Info")
+        .navigationBarTitle("Impressum", displayMode: .inline)
         
     }
     
 }
 
-struct InfoView_Previews: PreviewProvider {
+struct ImprintView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView()
+        ImprintView()
     }
 }

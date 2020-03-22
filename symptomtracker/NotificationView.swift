@@ -56,7 +56,7 @@ struct NotificationView: View {
                 
             }
         }
-        .navigationBarTitle("Erinnerungen")
+        .navigationBarTitle("Erinnerungen", displayMode: .inline)
         .onAppear {
             print(".onAppear")
             self.updateHasActiveNotificationState()
@@ -119,8 +119,6 @@ func scheduleNotification() {
         }
         
     }
-    
-    print("Notification scheduled")
     
 }
 
