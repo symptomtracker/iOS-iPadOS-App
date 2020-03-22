@@ -10,7 +10,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            
+            WebContentView()
+            .tabItem {
+                Image("WebContent")
+                Text("SymptomTracker")
+            }
+            .tag(0)
+            
+            WebContentView()
+            .tabItem {
+                Image("WebContent")
+                Text("Benachrichtigungen")
+            }
+            .tag(0)
+            
+        }
     }
 }
 

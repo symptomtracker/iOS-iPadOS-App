@@ -13,6 +13,8 @@
 		7992A0D524267CF4003FBE3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7992A0D424267CF4003FBE3B /* Assets.xcassets */; };
 		7992A0D824267CF4003FBE3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7992A0D724267CF4003FBE3B /* Preview Assets.xcassets */; };
 		7992A0DB24267CF4003FBE3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7992A0D924267CF4003FBE3B /* LaunchScreen.storyboard */; };
+		7992A0E324267D2F003FBE3B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E224267D2F003FBE3B /* WebView.swift */; };
+		7992A0E524279CF2003FBE3B /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E424279CF2003FBE3B /* WebContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7992A0D724267CF4003FBE3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7992A0DA24267CF4003FBE3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7992A0DC24267CF4003FBE3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7992A0E224267D2F003FBE3B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		7992A0E424279CF2003FBE3B /* WebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				7992A0CE24267CF3003FBE3B /* AppDelegate.swift */,
 				7992A0D024267CF3003FBE3B /* SceneDelegate.swift */,
 				7992A0D224267CF3003FBE3B /* ContentView.swift */,
+				7992A0E424279CF2003FBE3B /* WebContentView.swift */,
+				7992A0E224267D2F003FBE3B /* WebView.swift */,
 				7992A0D424267CF4003FBE3B /* Assets.xcassets */,
 				7992A0D924267CF4003FBE3B /* LaunchScreen.storyboard */,
 				7992A0DC24267CF4003FBE3B /* Info.plist */,
@@ -147,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7992A0CF24267CF3003FBE3B /* AppDelegate.swift in Sources */,
+				7992A0E324267D2F003FBE3B /* WebView.swift in Sources */,
 				7992A0D124267CF3003FBE3B /* SceneDelegate.swift in Sources */,
+				7992A0E524279CF2003FBE3B /* WebContentView.swift in Sources */,
 				7992A0D324267CF3003FBE3B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"symptomtracker/Preview Content\"";
 				DEVELOPMENT_TEAM = XAULD32DT8;
 				ENABLE_PREVIEWS = YES;
@@ -305,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"symptomtracker/Preview Content\"";
 				DEVELOPMENT_TEAM = XAULD32DT8;
 				ENABLE_PREVIEWS = YES;
