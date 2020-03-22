@@ -10,33 +10,61 @@ import SwiftUI
 
 struct NotificationView: View {
     
+    // nil means unknown state
+    @State private var hasActiveNotification: Bool? = nil
+    var toggleIsDisabled: Bool {
+        hasActiveNotification == nil
+    }
     
+    func updateHasActiveNotificationState() {
+        
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests() { (requests: [UNNotificationRequest]) in
+            
+            let isEmtpy = requests.filter({ $0.identifier == notificationIdentifier }).isEmpty
+            self.hasActiveNotification = !isEmtpy
+                        
+        }
+
+    }
     
     var body: some View {
-        Form {
+        
+        let isNotificationActiveBinding: Binding<Bool> = Binding(
+            get: {
+                return self.hasActiveNotification ?? false
+            },
+            set: {
+                if $0 {
+                    askToAllowNotifications()
+                    scheduleNotification()
+                    self.hasActiveNotification = true
+                } else {
+                    removeNotification()
+                    self.hasActiveNotification = false
+                }
+            }
+        )
+       
+        return Form {
             Section(
-                header: Text("Tägliche Benachrichtigung".uppercased())
+                header: Text("Tägliche Benachrichtigung".uppercased()),
+                footer: Text("Sie werden jeden Tag um 12:00 mit einer Benachrichtigung daran erinnert, Ihre Symptome im SymptomTracker einzutragen.")
             ) {
                 
-                Button("Benachrichtigungen um 12:00 aktivieren") {
-                    allowNotifications()
-                    scheduleNotification()
-                    print("Button schedule Notification pressed.")
-                }
-            
-                Button("Benachrichtigungen um 12:00 deaktivieren") {
-                    removeNotification()
-                    print("Button remove Notification pressed.")
-                }
-
-                Button("Benachrichtigungen anzeigen") {
+                Toggle("Benachrichtigung", isOn: isNotificationActiveBinding)
+                .disabled(toggleIsDisabled)
+                
+                Button("DEBUG: Benachrichtigungen anzeigen") {
                     showNotification()
-                    print("Button show Notifications pressed.")
                 }
 
             }
         }
         .navigationBarTitle("Benachrichtigungen")
+        .onAppear {
+            self.updateHasActiveNotificationState()
+        }
         
     }
 }
@@ -46,8 +74,6 @@ struct NotificationView_Previews: PreviewProvider {
         NotificationView()
     }
 }
-
-
 
 let notificationIdentifier = "dailyAlert"
 
@@ -106,9 +132,6 @@ func removeNotification() {
     
     let center = UNUserNotificationCenter.current()
     center.removePendingNotificationRequests(withIdentifiers: [notificationIdentifier])
-    print("Notification removed.")
-    
-    
     
 }
 
@@ -131,12 +154,11 @@ func showNotification() {
 
 }
 
-func allowNotifications() {
+func askToAllowNotifications() {
     
     let center = UNUserNotificationCenter.current()
     center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-        // Enable or disable features based on authorization.
+        // TODO.
     }
 
 }
-

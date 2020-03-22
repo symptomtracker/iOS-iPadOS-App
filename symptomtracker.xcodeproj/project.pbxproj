@@ -17,6 +17,7 @@
 		7992A0E524279CF2003FBE3B /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E424279CF2003FBE3B /* WebContentView.swift */; };
 		7992A0E72427A1FB003FBE3B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E62427A1FB003FBE3B /* NotificationView.swift */; };
 		7992A0E92427D4A7003FBE3B /* CurrentUNCenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E82427D4A7003FBE3B /* CurrentUNCenterDelegate.swift */; };
+		7992A0EB2427E163003FBE3B /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0EA2427E163003FBE3B /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7992A0E424279CF2003FBE3B /* WebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentView.swift; sourceTree = "<group>"; };
 		7992A0E62427A1FB003FBE3B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		7992A0E82427D4A7003FBE3B /* CurrentUNCenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUNCenterDelegate.swift; sourceTree = "<group>"; };
+		7992A0EA2427E163003FBE3B /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				7992A0D224267CF3003FBE3B /* ContentView.swift */,
 				7992A0E424279CF2003FBE3B /* WebContentView.swift */,
 				7992A0E62427A1FB003FBE3B /* NotificationView.swift */,
+				7992A0EA2427E163003FBE3B /* InfoView.swift */,
 				7992A0E82427D4A7003FBE3B /* CurrentUNCenterDelegate.swift */,
 				7992A0E224267D2F003FBE3B /* WebView.swift */,
 				7992A0D424267CF4003FBE3B /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7992A0EB2427E163003FBE3B /* InfoView.swift in Sources */,
 				7992A0CF24267CF3003FBE3B /* AppDelegate.swift in Sources */,
 				7992A0E324267D2F003FBE3B /* WebView.swift in Sources */,
 				7992A0D124267CF3003FBE3B /* SceneDelegate.swift in Sources */,

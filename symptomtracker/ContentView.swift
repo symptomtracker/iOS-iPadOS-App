@@ -17,17 +17,23 @@ struct ContentView: View {
                 Image("WebContent")
                 Text("SymptomTracker")
             }
-            .tag(0)
             
             NavigationView {
                 NotificationView()
             }
             .tabItem {
-                Image("WebContent")
-                Text("Benachrichtigungen")
+                Image(systemName: "alarm")
+                Text("Benachrichtigung")
             }
-            .tag(0)
-            
+
+            NavigationView {
+                InfoView()
+            }
+            .tabItem {
+                Image(systemName: "info.circle.fill")
+                Text("Impressum")
+            }
+
         }
     }
 }
