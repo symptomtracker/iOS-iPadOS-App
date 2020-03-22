@@ -58,7 +58,6 @@ struct NotificationView: View {
         }
         .navigationBarTitle("Erinnerungen", displayMode: .inline)
         .onAppear {
-            print(".onAppear")
             self.updateHasActiveNotificationState()
         }
         
