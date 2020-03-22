@@ -42,7 +42,7 @@ struct WebView: UIViewRepresentable {
     
     func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {
         
-        print("updateUIView")
+        //print("\(#function)")
 
         if
             context.coordinator.usedUrlString == nil || context.coordinator.usedUrlString! != urlString,

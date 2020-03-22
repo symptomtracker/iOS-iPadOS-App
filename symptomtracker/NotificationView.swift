@@ -12,9 +12,8 @@ struct NotificationView: View {
     
     // nil means unknown state
     @State private var hasActiveNotification: Bool? = nil
-    var toggleIsDisabled: Bool {
-        hasActiveNotification == nil
-    }
+    
+    private var toggleIsDisabled: Bool { hasActiveNotification == nil }
     
     func updateHasActiveNotificationState() {
         
@@ -48,21 +47,22 @@ struct NotificationView: View {
        
         return Form {
             Section(
-                header: Text("Tägliche Benachrichtigung".uppercased()),
+                header: Text("Tägliche Erinnerung".uppercased()),
                 footer: Text("Sie werden jeden Tag um 12:00 mit einer Benachrichtigung daran erinnert, Ihre Symptome im SymptomTracker einzutragen.")
             ) {
                 
-                Toggle("Benachrichtigung", isOn: isNotificationActiveBinding)
+                Toggle("Erinnerung", isOn: isNotificationActiveBinding)
                 .disabled(toggleIsDisabled)
                 
-                Button("DEBUG: Benachrichtigungen anzeigen") {
+                Button("DEBUG: Erinnerungen anzeigen") {
                     showNotification()
                 }
 
             }
         }
-        .navigationBarTitle("Benachrichtigungen")
+        .navigationBarTitle("Erinnerungen")
         .onAppear {
+            print(".onAppear")
             self.updateHasActiveNotificationState()
         }
         
@@ -86,7 +86,7 @@ var getRequest: UNNotificationRequest {
         arguments: nil
     )
     content.body = NSString.localizedUserNotificationString(
-        forKey: "Trag jeden Tag deine Symptome im SymptomTracker ein.",
+        forKey: "Tragen Sie jeden Tag Ihre Symptome im SymptomTracker ein!",
         arguments: nil
     )
     content.sound = UNNotificationSound.default
@@ -135,6 +135,7 @@ func removeNotification() {
     
 }
 
+// Only for debug:
 func showNotification() {
     
     let center = UNUserNotificationCenter.current()

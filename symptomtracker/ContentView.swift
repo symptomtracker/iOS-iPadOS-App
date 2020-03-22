@@ -14,8 +14,8 @@ struct ContentView: View {
             
             WebContentView()
             .tabItem {
-                Image("WebContent")
-                Text("SymptomTracker")
+                Image(systemName: "square.and.pencil")
+                Text("Tagebuch")
             }
             
             NavigationView {
@@ -23,14 +23,14 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "alarm")
-                Text("Benachrichtigung")
+                Text("Erinnerungen")
             }
 
             NavigationView {
                 InfoView()
             }
             .tabItem {
-                Image(systemName: "info.circle.fill")
+                Image(systemName: "info.circle")
                 Text("Impressum")
             }
 
