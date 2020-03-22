@@ -19,7 +19,9 @@ struct ContentView: View {
             }
             .tag(0)
             
-            WebContentView()
+            NavigationView {
+                NotificationView()
+            }
             .tabItem {
                 Image("WebContent")
                 Text("Benachrichtigungen")

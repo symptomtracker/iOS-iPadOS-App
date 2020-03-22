@@ -15,6 +15,7 @@
 		7992A0DB24267CF4003FBE3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7992A0D924267CF4003FBE3B /* LaunchScreen.storyboard */; };
 		7992A0E324267D2F003FBE3B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E224267D2F003FBE3B /* WebView.swift */; };
 		7992A0E524279CF2003FBE3B /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E424279CF2003FBE3B /* WebContentView.swift */; };
+		7992A0E72427A1FB003FBE3B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992A0E62427A1FB003FBE3B /* NotificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7992A0DC24267CF4003FBE3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7992A0E224267D2F003FBE3B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		7992A0E424279CF2003FBE3B /* WebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebContentView.swift; sourceTree = "<group>"; };
+		7992A0E62427A1FB003FBE3B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				7992A0D024267CF3003FBE3B /* SceneDelegate.swift */,
 				7992A0D224267CF3003FBE3B /* ContentView.swift */,
 				7992A0E424279CF2003FBE3B /* WebContentView.swift */,
+				7992A0E62427A1FB003FBE3B /* NotificationView.swift */,
 				7992A0E224267D2F003FBE3B /* WebView.swift */,
 				7992A0D424267CF4003FBE3B /* Assets.xcassets */,
 				7992A0D924267CF4003FBE3B /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 				7992A0D124267CF3003FBE3B /* SceneDelegate.swift in Sources */,
 				7992A0E524279CF2003FBE3B /* WebContentView.swift in Sources */,
 				7992A0D324267CF3003FBE3B /* ContentView.swift in Sources */,
+				7992A0E72427A1FB003FBE3B /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
