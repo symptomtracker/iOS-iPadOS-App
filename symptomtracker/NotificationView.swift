@@ -54,12 +54,6 @@ struct NotificationView: View {
                 Toggle("Erinnerung", isOn: isNotificationActiveBinding)
                 .disabled(toggleIsDisabled)
                 
-                /*
-                Button("DEBUG: Erinnerungen anzeigen") {
-                    showNotification()
-                }
-                */
-                
             }
         }
         .navigationBarTitle("Erinnerungen")
@@ -136,28 +130,6 @@ func removeNotification() {
     center.removePendingNotificationRequests(withIdentifiers: [notificationIdentifier])
     
 }
-
-/*
-// Only for debug:
-func showNotification() {
-    
-    let center = UNUserNotificationCenter.current()
-    center.getPendingNotificationRequests() { (requests: [UNNotificationRequest]) in
-        
-        print("Begin getPendingNotificationRequests")
-        for request in requests {
-            if request.identifier == notificationIdentifier {
-                print("    Found one.")
-            }
-            
-        }
-        print("End getPendingNotificationRequests")
-        
-    }
-    print("delegate \((center.delegate != nil) ? "exists" : "= nil")")
-
-}
-*/
 
 func askToAllowNotifications() {
     
