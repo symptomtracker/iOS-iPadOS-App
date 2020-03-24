@@ -92,7 +92,7 @@ var getRequest: UNNotificationRequest {
     dateInfo.minute = 0
     let trigger = UNCalendarNotificationTrigger(
         dateMatching: dateInfo,
-        repeats: false
+        repeats: true
     )
     
     // Request
